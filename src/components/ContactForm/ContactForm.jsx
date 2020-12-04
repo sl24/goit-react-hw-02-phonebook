@@ -2,7 +2,7 @@ import { Component } from 'react';
 
 import shortid from 'shortid';
 
-import { InputForm, Button } from './ContactFormStyles';
+import { Form, InputForm, Button } from './ContactFormStyles';
 
 import PropTypes from 'prop-types';
 
@@ -50,7 +50,7 @@ class ContactForm extends Component {
   render() {
     const { name, phone } = this.state;
     return (
-      <form onSubmit={this.handleFormSubmit}>
+      <Form onSubmit={this.handleFormSubmit}>
         <InputForm
           type="text"
           name="name"
@@ -66,7 +66,7 @@ class ContactForm extends Component {
           onChange={this.handleChangeForm}
         />
         <Button type="submit">Add contact</Button>
-      </form>
+      </Form>
     );
   }
 }

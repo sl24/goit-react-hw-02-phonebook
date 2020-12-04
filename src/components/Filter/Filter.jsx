@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types';
 
+import FilterInput from './FilterStyles';
+
 const Filter = ({ filter, onChange }) => {
   return (
-    <input
+    <FilterInput
       type="text"
       name="filter"
       placeholder="Enter name for search"
       value={filter}
       onChange={({ target }) => onChange(target.value)}
-    ></input>
+    ></FilterInput>
   );
 };
 

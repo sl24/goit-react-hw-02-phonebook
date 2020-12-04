@@ -1,17 +1,19 @@
 import PropTypes from 'prop-types';
 
+import { List, ListItem, Button } from './ContactListStyles';
+
 const ContactListItem = ({ name, phone, onRemove }) => {
   return (
-    <li>
-      {name}: {phone} <button onClick={onRemove}>Delete</button>
-    </li>
+    <ListItem>
+      {name}: {phone} <Button onClick={onRemove}>Delete</Button>
+    </ListItem>
   );
 };
 
 const ContactList = ({ contacts, onRemove }) => {
   if (contacts.length === 0) return null;
   return (
-    <ul>
+    <List>
       {contacts.map(({ id, name, phone }) => (
         <ContactListItem
           key={id}
@@ -20,7 +22,7 @@ const ContactList = ({ contacts, onRemove }) => {
           onRemove={() => onRemove(id)}
         />
       ))}
-    </ul>
+    </List>
   );
 };
 

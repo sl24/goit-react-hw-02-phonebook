@@ -20,7 +20,7 @@ const MainTitle = styled.h1`
 
 const ContactTitle = styled.h2`
   color: var(--titleColor);
-  font-size: 32px;
+  font-size: 24px;
 `;
 
 export { Container, MainTitle, ContactTitle };

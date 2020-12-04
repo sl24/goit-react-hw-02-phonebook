@@ -3,9 +3,6 @@
   --primaryTextColor: #3f3f3f;
   --titleColor: #080808;
   --boxShadow: 8px 8px 14px 0px rgba(0, 0, 0, 0.7);
-  --boxShadowHover: 5px 5px 0px 0px #91e0f8, 10px 10px 0px 0px #a9e7fa,
-    15px 15px 0px 0px #c8edf8, 20px 20px 0px 0px#cdebf5,
-    25px 25px 0px 0px #eef6f8, 8px 8px 0px 14px rgba(255, 255, 255, 0);
   --timingFunction: cubic-bezier(0.4, 0, 0.2, 1);
 }
 

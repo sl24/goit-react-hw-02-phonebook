@@ -1,28 +1,22 @@
 import styled from 'styled-components';
 
-const Form = styled.form`
-  display: block;
-  margin-bottom: 10px;
+const List = styled.ul`
+  list-style: none;
+  padding: 0;
 `;
 
-const InputForm = styled.input`
-  display: block;
-  margin: 10px auto;
-  padding: 12px 20px;
-  font-size: 18px;
-  border-radius: 30px;
-
-  &::placeholder {
-    padding-left: 10px;
-    font-size: 18px;
-  }
+const ListItem = styled.li`
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
 `;
 
 const Button = styled.button`
+  margin-left: auto;
   outline: none;
-  padding: 12px 20px;
-  margin: 10px 5px;
-  border-radius: 30px;
+  padding: 2px 5px;
+  border-radius: 10px;
   background-image: linear-gradient(
     45deg,
     #6ab1d7 0%,
@@ -31,8 +25,7 @@ const Button = styled.button`
   );
   background-position: 100% 0;
   background-size: 200% 200%;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
+  font-size: 16px;
   color: white;
   box-shadow: 0 16px 32px 0 rgba(0, 40, 120, 0.35);
   transition: 0.5s;
@@ -43,4 +36,4 @@ const Button = styled.button`
   }
 `;
 
-export { Form, InputForm, Button };
+export { List, ListItem, Button };
