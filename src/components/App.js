@@ -4,7 +4,7 @@ import ContactForm from './ContactForm';
 import ContactList from './ContactList';
 import Filter from './Filter';
 
-import { Container, MainTitle } from './AppStyles';
+import { Container, MainTitle, ContactTitle } from './AppStyles';
 
 export default class App extends Component {
   state = {
@@ -50,12 +50,12 @@ export default class App extends Component {
     return (
       <Container>
         <MainTitle>Phonebook</MainTitle>
-        <h2>Form Contact</h2>
+        <ContactTitle>Form Contact</ContactTitle>
         <ContactForm
           onAdd={this.handleAddContact}
           onCheckUnique={this.handleCheckUnique}
         />
-        <h2>Contacts List</h2>
+        <ContactTitle>Contacts List</ContactTitle>
         <Filter filter={filter} onChange={this.handleFilterChange} />
         <ContactList
           contacts={visibleContacts}

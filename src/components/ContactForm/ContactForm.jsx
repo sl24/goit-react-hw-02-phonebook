@@ -2,6 +2,8 @@ import { Component } from 'react';
 
 import shortid from 'shortid';
 
+import { InputForm, Button } from './ContactFormStyles';
+
 import PropTypes from 'prop-types';
 
 const INITIAL_STATE = {
@@ -49,21 +51,21 @@ class ContactForm extends Component {
     const { name, phone } = this.state;
     return (
       <form onSubmit={this.handleFormSubmit}>
-        <input
+        <InputForm
           type="text"
           name="name"
           placeholder="Enter name"
           value={name}
           onChange={this.handleChangeForm}
         />
-        <input
+        <InputForm
           type="tel"
           name="phone"
           placeholder="Enter phone number"
           value={phone}
           onChange={this.handleChangeForm}
         />
-        <button type="submit">Add contact</button>
+        <Button type="submit">Add contact</Button>
       </form>
     );
   }

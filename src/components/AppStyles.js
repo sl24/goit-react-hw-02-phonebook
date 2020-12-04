@@ -13,14 +13,14 @@ const Container = styled.div`
 `;
 
 const MainTitle = styled.h1`
+  font-size: 48px;
   color: var(--titleColor);
   text-align: center;
 `;
 
 const ContactTitle = styled.h2`
-  text-align: center;
+  color: var(--titleColor);
   font-size: 32px;
-  color: #fa8072;
 `;
 
-export { Container, MainTitle };
+export { Container, MainTitle, ContactTitle };
