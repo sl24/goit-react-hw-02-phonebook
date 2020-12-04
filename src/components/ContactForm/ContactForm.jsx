@@ -25,6 +25,8 @@ class ContactForm extends Component {
     if (!isValidatedForm) return;
 
     onAdd({ id: uuid(), name, phone });
+
+    this.resetForm();
   };
 
   validateForm = () => {
@@ -44,20 +46,20 @@ class ContactForm extends Component {
   render() {
     const { name, phone } = this.state;
     return (
-      <form>
+      <form onSubmit={this.handleFormSubmit}>
         <input
           type="text"
           name="name"
           placeholder="Enter name"
           value={name}
-          onChange
+          onChange={this.handleChangeForm}
         />
         <input
           type="tel"
           name="phone"
           placeholder="Enter phone number"
           value={phone}
-          onChange
+          onChange={this.handleChangeForm}
         />
         <button type="submit">Add contact</button>
       </form>
