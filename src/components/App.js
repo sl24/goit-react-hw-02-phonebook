@@ -23,7 +23,7 @@ export default class App extends Component {
 
     const isExistContact = !!contacts.find(contact => contact.name === name);
 
-    isExistContact && alert('Contact is already exist');
+    isExistContact && alert(`${name} is already in contact`);
 
     return !isExistContact;
   };
