@@ -1,6 +1,8 @@
 import { Component } from 'react';
 
-import { v4 as uuid } from 'uuid';
+import shortid from 'shortid';
+
+import PropTypes from 'prop-types';
 
 const INITIAL_STATE = {
   name: '',
@@ -24,7 +26,7 @@ class ContactForm extends Component {
 
     if (!isValidatedForm) return;
 
-    onAdd({ id: uuid(), name, phone });
+    onAdd({ id: shortid.generate(), name, phone });
 
     this.resetForm();
   };
@@ -66,5 +68,10 @@ class ContactForm extends Component {
     );
   }
 }
+
+ContactForm.propTypes = {
+  onAdd: PropTypes.func.isRequired,
+  onCheckUnique: PropTypes.func.isRequired,
+};
 
 export default ContactForm;
